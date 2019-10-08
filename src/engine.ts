@@ -1,12 +1,14 @@
+type Life = 0 | 1;
+
 enum DOTS_STYLE {
-  POSITIVE_COLOR = '#111',
-  NEGATIVE_COLOR = '#FFF',
   WIDTH = 15,
   HEIGHT = 15,
   MARGIN = 3,
+  DEAD_COLOR = '#F2F2F7',
+  SURVIVE_COLOR = '#1C1C1E',
 }
 
-const BACKGROUND_COLOR = '#AAA';
+const BACKGROUND_COLOR = '#AEAEB2';
 
 const Util = {
   getCoordinateX(x: number) {
@@ -21,11 +23,11 @@ export class GameOfLifeEngine {
   x: number;
   y: number;
   intervalKey: null | number;
-  life: Array<Array<boolean>>;
+  life: Array<Array<Life>>;
   canvas: HTMLCanvasElement;
   context: CanvasRenderingContext2D;
 
-  constructor(life: Array<Array<boolean>>) {
+  constructor(life: Array<Array<Life>>) {
     const cvs = document.createElement('canvas');
     const ctx = cvs.getContext('2d');
     const x = life
@@ -65,14 +67,14 @@ export class GameOfLifeEngine {
   drawDots() {
     this.clear();
     this.life.forEach((children, i) => {
-      children.forEach((yn, j) => {
-        this.context.fillStyle = yn ? DOTS_STYLE.POSITIVE_COLOR : DOTS_STYLE.NEGATIVE_COLOR;
+      children.forEach((isSurvive, j) => {
+        this.context.fillStyle = isSurvive ? DOTS_STYLE.SURVIVE_COLOR : DOTS_STYLE.DEAD_COLOR;
         this.drawDot(j, i);
       });
     });
   }
 
-  isSurviveNextGeneration(x: number, y: number, isSurvive: boolean) {
+  isSurviveNextGeneration(x: number, y: number, isSurvive: Life) {
     const life = this.life;
     const edgeX = this.x - 1;
     const edgeY = this.y - 1;
@@ -86,20 +88,21 @@ export class GameOfLifeEngine {
       + Number(y < edgeY && life[y + 1][x])
       + Number(y < edgeY && x < edgeX && life[y + 1][x + 1])
     );
-    return (isSurvive && (count === 2 || count === 3)) || (!isSurvive && count === 3);
+    return (isSurvive && (count === 2 || count === 3)) || (!isSurvive && count === 3) ? 1 : 0;
   }
 
   startLife() {
-    this.stopLife();
-    this.intervalKey = window.setInterval(() => {
-      this.drawDots();
-      const life = this.life;
-      this.life = life.map((children, i) => (
-        children.map((yn, j) => (
-          this.isSurviveNextGeneration(j, i, yn)
-        ))
-      ));
-    }, 500);
+    if (!this.intervalKey) {
+      this.intervalKey = window.setInterval(() => {
+        this.drawDots();
+        const life = this.life;
+        this.life = life.map((children, i) => (
+          children.map((isSurvive, j) => (
+            this.isSurviveNextGeneration(j, i, isSurvive)
+          ))
+        ));
+      }, 500);
+    }
   }
 
   stopLife() {

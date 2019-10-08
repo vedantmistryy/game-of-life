@@ -10,81 +10,80 @@ const render = (name: string, engine: GameOfLifeEngine) => {
   engine.startLife();
 };
 
-render('Blinker', new GameOfLifeEngine([
-  [false, false, false, false, false],
-  [false, false, false, false, false],
-  [false, true, true, true, false],
-  [false, false, false, false, false],
-  [false, false, false, false, false],
-]));
-
-render('Lighthouse', new GameOfLifeEngine([
-  [false, false, false, false, false, false],
-  [false, true, true, false, false, false],
-  [false, true, false, false, false, false],
-  [false, false, false, false, true, false],
-  [false, false, false, true, true, false],
-  [false, false, false, false, false, false],
-]));
-
-render('Toad', new GameOfLifeEngine([
-  [false, false, false, false, false, false],
-  [false, false, false, false, false, false],
-  [false, false, true, true, true, false],
-  [false, true, true, true, false, false],
-  [false, false, false, false, false, false],
-  [false, false, false, false, false, false],
-]));
-
-render('Pulsar', new GameOfLifeEngine([
-  [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, true, true, true, false, false, false, true, true, true, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-  [false, false, true, false, false, false, false, true, false, true, false, false, false, false, true, false, false],
-  [false, false, true, false, false, false, false, true, false, true, false, false, false, false, true, false, false],
-  [false, false, true, false, false, false, false, true, false, true, false, false, false, false, true, false, false],
-  [false, false, false, false, true, true, true, false, false, false, true, true, true, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, true, true, true, false, false, false, true, true, true, false, false, false, false],
-  [false, false, true, false, false, false, false, true, false, true, false, false, false, false, true, false, false],
-  [false, false, true, false, false, false, false, true, false, true, false, false, false, false, true, false, false],
-  [false, false, true, false, false, false, false, true, false, true, false, false, false, false, true, false, false],
-  [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, true, true, true, false, false, false, true, true, true, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-  [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false],
-]));
-
 render('Block', new GameOfLifeEngine([
-  [false, false, false, false],
-  [false, true, true, false],
-  [false, true, true, false],
-  [false, false, false, false],
+  [0, 0, 0, 0],
+  [0, 1, 1, 0],
+  [0, 1, 1, 0],
+  [0, 0, 0, 0],
 ]));
 
 render('Beehive', new GameOfLifeEngine([
-  [false, false, false, false, false, false],
-  [false, false, true, true, false, false],
-  [false, true, false, false, true, false],
-  [false, false, true, true, false, false],
-  [false, false, false, false, false, false],
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 1, 0, 0],
+  [0, 1, 0, 0, 1, 0],
+  [0, 0, 1, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0],
 ]));
 
 render('Boat', new GameOfLifeEngine([
-  [false, false, false, false, false],
-  [false, true, true, false, false],
-  [false, true, false, true, false],
-  [false, false, true, false, false],
-  [false, false, false, false, false],
+  [0, 0, 0, 0, 0],
+  [0, 1, 1, 0, 0],
+  [0, 1, 0, 1, 0],
+  [0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0],
 ]));
 
 render('Loaf', new GameOfLifeEngine([
-  [false, false, false, false, false, false],
-  [false, false, true, true, false, false],
-  [false, true, false, false, true, false],
-  [false, false, true, false, true, false],
-  [false, false, false, true, false, false],
-  [false, false, false, false, false, false]
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 1, 0, 0],
+  [0, 1, 0, 0, 1, 0],
+  [0, 0, 1, 0, 1, 0],
+  [0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0]
 ]));
 
+render('Blinker', new GameOfLifeEngine([
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 1, 1, 1, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+]));
+
+render('Lighthouse', new GameOfLifeEngine([
+  [0, 0, 0, 0, 0, 0],
+  [0, 1, 1, 0, 0, 0],
+  [0, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 0],
+  [0, 0, 0, 1, 1, 0],
+  [0, 0, 0, 0, 0, 0],
+]));
+
+render('Toad', new GameOfLifeEngine([
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 1, 1, 0],
+  [0, 1, 1, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0],
+]));
+
+render('Pulsar', new GameOfLifeEngine([
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+]));
