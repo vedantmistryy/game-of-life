@@ -1,9 +1,12 @@
 enum DOTS_STYLE {
-  COLOR = '#111',
+  POSITIVE_COLOR = '#111',
+  NEGATIVE_COLOR = '#FFF',
   WIDTH = 15,
   HEIGHT = 15,
   MARGIN = 3,
 }
+
+const BACKGROUND_COLOR = '#AAA';
 
 const Util = {
   getCoordinateX(x: number) {
@@ -34,7 +37,6 @@ export class GameOfLifeEngine {
     if (ctx) {
       cvs.width = Util.getCoordinateX(x);
       cvs.height = Util.getCoordinateY(y);
-      ctx.fillStyle = DOTS_STYLE.COLOR;
 
       this.x = x;
       this.y = y;
@@ -47,7 +49,8 @@ export class GameOfLifeEngine {
   }
 
   clear() {
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.context.fillStyle = BACKGROUND_COLOR;
+    this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
   drawDot(x: number, y: number) {
@@ -62,9 +65,10 @@ export class GameOfLifeEngine {
   drawDots() {
     this.clear();
     this.life.forEach((children, i) => {
-      children.forEach((yn, j) => (
-        yn && this.drawDot(j, i)
-      ));
+      children.forEach((yn, j) => {
+        this.context.fillStyle = yn ? DOTS_STYLE.POSITIVE_COLOR : DOTS_STYLE.NEGATIVE_COLOR;
+        this.drawDot(j, i);
+      });
     });
   }
 
