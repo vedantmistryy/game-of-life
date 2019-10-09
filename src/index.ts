@@ -1,74 +1,63 @@
-import { GameOfLifeEngine } from './engine';
+import { renderTitle, renderLife } from './renderer';
 
-const render = (name: string, engine: GameOfLifeEngine) => {
-  const wrapper = document.createElement('DIV');
-  const title = document.createElement('H1');
-  title.textContent = name;
-  wrapper.append(title);
-  wrapper.append(engine.canvas);
-  document.body.appendChild(wrapper);
-  engine.startLife();
-};
+renderTitle('Still Life', 1);
 
-render('Block', new GameOfLifeEngine([
+renderTitle('Strict Still Life', 2);
+
+renderLife('Block', [
   [0, 0, 0, 0],
   [0, 1, 1, 0],
   [0, 1, 1, 0],
   [0, 0, 0, 0],
-]));
-
-render('Beehive', new GameOfLifeEngine([
+]);
+renderLife('Beehive', [
   [0, 0, 0, 0, 0, 0],
   [0, 0, 1, 1, 0, 0],
   [0, 1, 0, 0, 1, 0],
   [0, 0, 1, 1, 0, 0],
   [0, 0, 0, 0, 0, 0],
-]));
-
-render('Boat', new GameOfLifeEngine([
+]);
+renderLife('Boat', [
   [0, 0, 0, 0, 0],
   [0, 1, 1, 0, 0],
   [0, 1, 0, 1, 0],
   [0, 0, 1, 0, 0],
   [0, 0, 0, 0, 0],
-]));
-
-render('Loaf', new GameOfLifeEngine([
+]);
+renderLife('Loaf', [
   [0, 0, 0, 0, 0, 0],
   [0, 0, 1, 1, 0, 0],
   [0, 1, 0, 0, 1, 0],
   [0, 0, 1, 0, 1, 0],
   [0, 0, 0, 1, 0, 0],
   [0, 0, 0, 0, 0, 0]
-]));
+]);
 
-render('Blinker', new GameOfLifeEngine([
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 1, 1, 1, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-]));
+// renderTitle('Pseudo Still Life', 2);
+// renderTitle('Quasi Still Life', 2);
+// renderTitle('Enumerating Still Life', 2);
 
-render('Lighthouse', new GameOfLifeEngine([
+renderTitle('Oscillator', 1);
+
+renderLife('Lighthouse', [
   [0, 0, 0, 0, 0, 0],
   [0, 1, 1, 0, 0, 0],
   [0, 1, 0, 0, 0, 0],
   [0, 0, 0, 0, 1, 0],
   [0, 0, 0, 1, 1, 0],
   [0, 0, 0, 0, 0, 0],
-]));
+]);
 
-render('Toad', new GameOfLifeEngine([
+renderLife('Toad', [
   [0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0],
   [0, 0, 1, 1, 1, 0],
   [0, 1, 1, 1, 0, 0],
   [0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0],
-]));
+]);
 
-render('Pulsar', new GameOfLifeEngine([
+renderLife('Pulsar', [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
@@ -86,4 +75,14 @@ render('Pulsar', new GameOfLifeEngine([
   [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-]));
+]);
+
+renderTitle('Muttering moat', 2);
+
+renderLife('Blinker', [
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 1, 1, 1, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+]);

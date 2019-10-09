@@ -15,9 +15,6 @@ module.exports = (env, arg) => {
     },
     module: {
       rules: [{
-        test: /\.(gif|ico)$/,
-        loader: "file-loader"
-      }, {
         test: /\.ts$/,
         loader: "ts-loader"
       }]
@@ -25,6 +22,7 @@ module.exports = (env, arg) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./src/index.html",
+        favicon: "./assets/favicon.gif",
         minify: {
           collapseBooleanAttributes: true,
           collapseInlineTagWhitespace: true,

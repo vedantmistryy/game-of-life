@@ -1,5 +1,3 @@
-type Life = 0 | 1;
-
 enum DOTS_STYLE {
   WIDTH = 15,
   HEIGHT = 15,
