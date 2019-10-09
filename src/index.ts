@@ -2,8 +2,12 @@ import { renderTitle, renderLife } from './renderer';
 
 renderTitle('Still Life', 1);
 
+
 renderTitle('Strict Still Life', 2);
 
+renderLife('15 Bent Paperclip', [[]]);
+renderLife('29-bit Still Life No.1', [[]]);
+renderLife('31.4', [[]]);
 renderLife('Block', [
   [0, 0, 0, 0],
   [0, 1, 1, 0],
@@ -86,3 +90,7 @@ renderLife('Blinker', [
   [0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0],
 ]);
+
+renderTitle('Eater', 1);
+
+renderLife('7×9 Eater', [[]]);
