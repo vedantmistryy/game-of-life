@@ -1,7 +1,7 @@
 enum DOTS_STYLE {
-  WIDTH = 15,
-  HEIGHT = 15,
-  MARGIN = 3,
+  WIDTH = 16,
+  HEIGHT = 16,
+  MARGIN = 2,
   DEAD_COLOR = '#F2F2F7',
   SURVIVE_COLOR = '#1C1C1E',
 }

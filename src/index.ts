@@ -15,6 +15,15 @@ import BargeWithLongTail from './life/still-life/barge-with-long-tail';
 import BargeWithVeryLongTail from './life/still-life/barge-with-very-long-tail';
 import BeeHat from './life/still-life/bee-hat';
 import Beehive from './life/still-life/beehive';
+import BeehiveAtBeehive from './life/still-life/beehive-at-beehive';
+import BeehiveAtClaw from './life/still-life/beehive-at-claw';
+import BeehiveAtLoaf from './life/still-life/beehive-at-loaf';
+import BeehiveOnCap from './life/still-life/beehive-on-cap';
+import BeehiveOnDock from './life/still-life/beehive-on-dock';
+import BeehiveOnTable from './life/still-life/beehive-on-table';
+import BeehiveWithBendTail from './life/still-life/beehive-with-bend-tail';
+import BeehiveWithNine from './life/still-life/beehive-with-nine';
+import BeehiveWithTail from './life/still-life/beehive-with-tail';
 import Block from './life/still-life/block';
 import Boat from './life/still-life/boat';
 import Loaf from './life/still-life/loaf';
@@ -33,6 +42,15 @@ renderTitle('Strict Still Life', 2);
   BargeWithVeryLongTail,
   BeeHat,
   Beehive,
+  BeehiveAtBeehive,
+  BeehiveAtClaw,
+  BeehiveAtLoaf,
+  BeehiveOnCap,
+  BeehiveOnDock,
+  BeehiveOnTable,
+  BeehiveWithBendTail,
+  BeehiveWithNine,
+  BeehiveWithTail,
   Block,
   Boat,
   Loaf,
