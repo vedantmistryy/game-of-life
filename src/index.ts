@@ -34,6 +34,18 @@ import BlockOnCover from './life/still-life/block-on-cover';
 import BlockOnDock from './life/still-life/block-on-dock';
 import BlockOnTable from './life/still-life/block-on-table';
 import Boat from './life/still-life/boat';
+import BoatTieEaterHead from './life/still-life/boat-tie-eater-head';
+import BoatTieEaterTail from './life/still-life/boat-tie-eater-tail';
+import BoatTieLongBoat from './life/still-life/boat-tie-long-boat';
+import BoatTieLongSnake from './life/still-life/boat-tie-long-snake';
+import BoatTieShip from './life/still-life/boat-tie-ship';
+import BoatTieSnake from './life/still-life/boat-tie-snake';
+import BoatWithCisTail from './life/still-life/boat-with-cis-tail';
+import BoatWithHookedTail from './life/still-life/boat-with-hooked-tail';
+import BoatWithLongTail from './life/still-life/boat-with-long-tail';
+import BoatWithLong3Tail from './life/still-life/boat-with-long3-tail';
+import BoatWithVeryLongTail from './life/still-life/boat-with-very-long-tail';
+import BoatTie from './life/still-life/boat-tie';
 import Loaf from './life/still-life/loaf';
 renderTitle('Strict Still Life', 2);
 [
@@ -69,6 +81,18 @@ renderTitle('Strict Still Life', 2);
   BlockOnDock,
   BlockOnTable,
   Boat,
+  BoatTieEaterHead,
+  BoatTieEaterTail,
+  BoatTieLongBoat,
+  BoatTieLongSnake,
+  BoatTieShip,
+  BoatTieSnake,
+  BoatWithCisTail,
+  BoatWithHookedTail,
+  BoatWithLongTail,
+  BoatWithLong3Tail,
+  BoatWithVeryLongTail,
+  BoatTie,
   Loaf,
 ].forEach(v => renderLife(v.title, v.life as Life[][]));
 
