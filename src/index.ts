@@ -45,7 +45,13 @@ import BoatWithHookedTail from './life/still-life/boat-with-hooked-tail';
 import BoatWithLongTail from './life/still-life/boat-with-long-tail';
 import BoatWithLong3Tail from './life/still-life/boat-with-long3-tail';
 import BoatWithVeryLongTail from './life/still-life/boat-with-very-long-tail';
+import Bookends from './life/still-life/bookends';
+import BookendsSiameseTables from './life/still-life/bookends-siamese-tables';
+import BrokenElevener from './life/still-life/broken-elevener';
+import BrokenSnake from './life/still-life/broken-snake';
+import BTS from './life/still-life/BTS';
 import BoatTie from './life/still-life/boat-tie';
+
 import Loaf from './life/still-life/loaf';
 renderTitle('Strict Still Life', 2);
 [
@@ -93,6 +99,11 @@ renderTitle('Strict Still Life', 2);
   BoatWithLong3Tail,
   BoatWithVeryLongTail,
   BoatTie,
+  Bookends,
+  BookendsSiameseTables,
+  BrokenElevener,
+  BrokenSnake,
+  BTS,
   Loaf,
 ].forEach(v => renderLife(v.title, v.life as Life[][]));
 
