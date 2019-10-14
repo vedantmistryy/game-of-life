@@ -51,7 +51,26 @@ import BrokenElevener from './life/still-life/broken-elevener';
 import BrokenSnake from './life/still-life/broken-snake';
 import BTS from './life/still-life/BTS';
 import BoatTie from './life/still-life/boat-tie';
-
+import Canoe from './life/still-life/canoe';
+import CanoeSiameseSnake from './life/still-life/canoe-siamese-snake';
+import CapAndDock from './life/still-life/cap-and-dock';
+import CarrierBridgeCarrier from './life/still-life/carrier-bridge-carrier';
+import CarrierBridgeSnake from './life/still-life/carrier-bridge-snake';
+import CarrierBridgeTable from './life/still-life/carrier-bridge-table';
+import CarrierSiameseCanoe from './life/still-life/carrier-siamese-canoe';
+import CarrierSiameseCarrier from './life/still-life/carrier-siamese-carrier';
+import CarrierSiameseDock from './life/still-life/carrier-siamese-dock';
+import CarrierSiameseEaterHead from './life/still-life/carrier-siamese-eater-head';
+import CarrierSiameseEaterTail from './life/still-life/carrier-siamese-eater-tail';
+import CarrierSiameseHookWithTailHook from './life/still-life/carrier-siamese-hook-with-tail-hook';
+import CarrierSiameseHookWithTailTail from './life/still-life/carrier-siamese-hook-with-tail-tail';
+import CarrierSiameseLongSnake from './life/still-life/carrier-siamese-long-snake';
+import CarrierSiameseShillelagh from './life/still-life/carrier-siamese-shillelagh';
+import CarrierSiameseTubWithTail from './life/still-life/carrier-siamese-tub-with-tail';
+import CarrierSiameseVeryLongSnake from './life/still-life/carrier-siamese-very-long-snake';
+import CarrierTieBoat from './life/still-life/carrier-tie-boat';
+import CarrierTieShip from './life/still-life/carrier-tie-ship';
+import CarrierWithFeather from './life/still-life/carrier-with-feather';
 import Loaf from './life/still-life/loaf';
 renderTitle('Strict Still Life', 2);
 [
@@ -104,6 +123,26 @@ renderTitle('Strict Still Life', 2);
   BrokenElevener,
   BrokenSnake,
   BTS,
+  Canoe,
+  CanoeSiameseSnake,
+  CapAndDock,
+  CarrierBridgeCarrier,
+  CarrierBridgeSnake,
+  CarrierBridgeTable,
+  CarrierSiameseCanoe,
+  CarrierSiameseCarrier,
+  CarrierSiameseDock,
+  CarrierSiameseEaterHead,
+  CarrierSiameseEaterTail,
+  CarrierSiameseHookWithTailHook,
+  CarrierSiameseHookWithTailTail,
+  CarrierSiameseLongSnake,
+  CarrierSiameseShillelagh,
+  CarrierSiameseTubWithTail,
+  CarrierSiameseVeryLongSnake,
+  CarrierTieBoat,
+  CarrierTieShip,
+  CarrierWithFeather,
   Loaf,
 ].forEach(v => renderLife(v.title, v.life as Life[][]));
 
@@ -137,7 +176,9 @@ renderTitle('Muttering moat', 2);
 ].forEach(v => renderLife(v.title, v.life as Life[][]));
 
 import _7x9Eater from './life/eater/7x9-eater';
+import CenturyEater from './life/eater/century-eater';
 renderTitle('Eater', 1);
 [
   _7x9Eater,
+  CenturyEater
 ].forEach(v => renderLife(v.title, v.life as Life[][]));
