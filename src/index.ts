@@ -71,6 +71,13 @@ import CarrierSiameseVeryLongSnake from './life/still-life/carrier-siamese-very-
 import CarrierTieBoat from './life/still-life/carrier-tie-boat';
 import CarrierTieShip from './life/still-life/carrier-tie-ship';
 import CarrierWithFeather from './life/still-life/carrier-with-feather';
+import ClawSiameseTubWithCape from './life/still-life/claw-siamese-tub-with-cape';
+import ClawWithBoatWithTail from './life/still-life/claw-with-boat-with-tail';
+import ClawWithTail from './life/still-life/claw-with-tail';
+import ClawWithTubWithTail from './life/still-life/claw-with-tub-with-tail';
+import Clips from './life/still-life/clips';
+import CloverleafInterchange from './life/still-life/cloverleaf-interchange';
+import Cthulhu from './life/still-life/cthulhu';
 import Loaf from './life/still-life/loaf';
 renderTitle('Strict Still Life', 2);
 [
@@ -143,6 +150,13 @@ renderTitle('Strict Still Life', 2);
   CarrierTieBoat,
   CarrierTieShip,
   CarrierWithFeather,
+  ClawSiameseTubWithCape,
+  ClawWithBoatWithTail,
+  ClawWithTail,
+  ClawWithTubWithTail,
+  Clips,
+  CloverleafInterchange,
+  Cthulhu,
   Loaf,
 ].forEach(v => renderLife(v.title, v.life as Life[][]));
 

@@ -1,4 +1,4 @@
-import {GameOfLifeEngine} from "./engine";
+import {GameOfLifeEngine} from './engine';
 
 const CONTAINER_CLASS_NAME = 'container';
 
