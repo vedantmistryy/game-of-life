@@ -114,9 +114,9 @@ import DoubleClaw from './life/still-life/double-claw';
 import DownSnakeOnTable from './life/still-life/down-snake-on-table';
 import EaterBridgeEater from './life/still-life/eater-bridge-eater';
 import EaterHeadSiameseEaterHead from './life/still-life/eater-head-siamese-eater-head';
-import EaterHeadSiameseEaterLongSnake from './life/still-life/eater-head-siamese-eater-long-snake';
-import EaterHeadSiameseEaterSnake from './life/still-life/eater-head-siamese-eater-snake';
 import EaterHeadSiameseEaterTail from './life/still-life/eater-head-siamese-eater-tail';
+import EaterHeadSiameseLongSnake from './life/still-life/eater-head-siamese-long-snake';
+import EaterHeadSiameseSnake from './life/still-life/eater-head-siamese-snake';
 import EaterTailSiameseEaterTail from './life/still-life/eater-tail-siamese-eater-tail';
 import EaterTailSiameseLongSnake from './life/still-life/eater-tail-siamese-long-snake';
 import EaterTailSiameseSnake from './life/still-life/eater-tail-siamese-snake';
@@ -248,9 +248,9 @@ renderTitle('Strict Still Life', 2);
   DownSnakeOnTable,
   EaterBridgeEater,
   EaterHeadSiameseEaterHead,
-  EaterHeadSiameseEaterLongSnake,
-  EaterHeadSiameseEaterSnake,
   EaterHeadSiameseEaterTail,
+  EaterHeadSiameseLongSnake,
+  EaterHeadSiameseSnake,
   EaterTailSiameseEaterTail,
   EaterTailSiameseLongSnake,
   EaterTailSiameseSnake,
