@@ -1,5 +1,5 @@
 export default {
-  title: 'Cis-block on long hook',
+  title: 'Cis-boat amphisbaena',
   life: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 1, 0, 0],
