@@ -147,6 +147,10 @@ import HookWithTailWithCape from './life/still-life/hook-with-tail-with-cape';
 import HookWithTwoTails from './life/still-life/hook-with-two-tails';
 import HouseOnHouseSiameseTableOnTableWeldHatSiameseHat from './life/still-life/house-on-house-siamese-table-on-table-weld-hat-siamese-hat';
 import HungryHat from './life/still-life/hungry-hat';
+import InflectedClips from './life/still-life/inflected-clips';
+import InflectedLongSnake from './life/still-life/inflected-long-snake';
+import Inflexion from './life/still-life/inflexion';
+import IntegralSign from './life/still-life/integral-sign';
 import Loaf from './life/still-life/loaf';
 renderTitle('Strict Still Life', 2);
 [
@@ -295,6 +299,10 @@ renderTitle('Strict Still Life', 2);
   HookWithTwoTails,
   HouseOnHouseSiameseTableOnTableWeldHatSiameseHat,
   HungryHat,
+  InflectedClips,
+  InflectedLongSnake,
+  Inflexion,
+  IntegralSign,
   Loaf,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
