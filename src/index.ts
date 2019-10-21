@@ -139,6 +139,14 @@ import HatSiameseVase from './life/still-life/hat-siamese-vase';
 import HexagonalKey from './life/still-life/hexagonal-key';
 import Honeybarge from './life/still-life/honeybarge';
 import Honeycomb from './life/still-life/honeycomb';
+import HookWithNine from './life/still-life/hook-with-nine';
+import HookWithTail from './life/still-life/hook-with-tail';
+import HookWithTailHookSiameseSnake from './life/still-life/hook-with-tail-hook-siamese-snake';
+import HookWithTailTailSiameseSnake from './life/still-life/hook-with-tail-tail-siamese-snake';
+import HookWithTailWithCape from './life/still-life/hook-with-tail-with-cape';
+import HookWithTwoTails from './life/still-life/hook-with-two-tails';
+import HouseOnHouseSiameseTableOnTableWeldHatSiameseHat from './life/still-life/house-on-house-siamese-table-on-table-weld-hat-siamese-hat';
+import HungryHat from './life/still-life/hungry-hat';
 import Loaf from './life/still-life/loaf';
 renderTitle('Strict Still Life', 2);
 [
@@ -279,6 +287,14 @@ renderTitle('Strict Still Life', 2);
   HexagonalKey,
   Honeybarge,
   Honeycomb,
+  HookWithNine,
+  HookWithTail,
+  HookWithTailHookSiameseSnake,
+  HookWithTailTailSiameseSnake,
+  HookWithTailWithCape,
+  HookWithTwoTails,
+  HouseOnHouseSiameseTableOnTableWeldHatSiameseHat,
+  HungryHat,
   Loaf,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
