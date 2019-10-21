@@ -151,6 +151,17 @@ import InflectedClips from './life/still-life/inflected-clips';
 import InflectedLongSnake from './life/still-life/inflected-long-snake';
 import Inflexion from './life/still-life/inflexion';
 import IntegralSign from './life/still-life/integral-sign';
+import IntegralWithCisHook from './life/still-life/integral-with-cis-hook';
+import IntegralWithHook from './life/still-life/integral-with-hook';
+import IntegralWithHookAndTail from './life/still-life/integral-with-hook-and-tail';
+import IntegralWithLongHook from './life/still-life/integral-with-long-hook';
+import IntegralWithLongHookAndTub from './life/still-life/integral-with-long-hook-and-tub';
+import IntegralWithTub from './life/still-life/integral-with-tub';
+import IntegralWithTubAndHook from './life/still-life/integral-with-tub-and-hook';
+import IntegralWithTubAndTail from './life/still-life/integral-with-tub-and-tail';
+import IntegralWithTwoTubs from './life/still-life/integral-with-two-tubs';
+import IntegralWithVeryLongHook from './life/still-life/integral-with-very-long-hook';
+import InvertedDoubleClaw from './life/still-life/inverted-double-claw';
 import Loaf from './life/still-life/loaf';
 renderTitle('Strict Still Life', 2);
 [
@@ -303,6 +314,17 @@ renderTitle('Strict Still Life', 2);
   InflectedLongSnake,
   Inflexion,
   IntegralSign,
+  IntegralWithCisHook,
+  IntegralWithHook,
+  IntegralWithHookAndTail,
+  IntegralWithLongHook,
+  IntegralWithLongHookAndTub,
+  IntegralWithTub,
+  IntegralWithTubAndHook,
+  IntegralWithTubAndTail,
+  IntegralWithTwoTubs,
+  IntegralWithVeryLongHook,
+  InvertedDoubleClaw,
   Loaf,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
