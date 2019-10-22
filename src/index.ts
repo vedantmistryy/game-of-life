@@ -145,7 +145,8 @@ import HookWithTailHookSiameseSnake from './life/still-life/hook-with-tail-hook-
 import HookWithTailTailSiameseSnake from './life/still-life/hook-with-tail-tail-siamese-snake';
 import HookWithTailWithCape from './life/still-life/hook-with-tail-with-cape';
 import HookWithTwoTails from './life/still-life/hook-with-two-tails';
-import HouseOnHouseSiameseTableOnTableWeldHatSiameseHat from './life/still-life/house-on-house-siamese-table-on-table-weld-hat-siamese-hat';
+import HouseOnHouseSiameseTableOnTableWeldHatSiameseHat
+  from './life/still-life/house-on-house-siamese-table-on-table-weld-hat-siamese-hat';
 import HungryHat from './life/still-life/hungry-hat';
 import InflectedClips from './life/still-life/inflected-clips';
 import InflectedLongSnake from './life/still-life/inflected-long-snake';
