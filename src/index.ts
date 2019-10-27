@@ -186,7 +186,8 @@ import LongShip from './life/still-life/long-ship';
 import LongSnake from './life/still-life/long-snake';
 import LongSnakeSiameseLongSnake from './life/still-life/long-snake-siamese-long-snake';
 import LongTubClawWithTail from './life/still-life/long-tub-claw-with-tail';
-import Longhorn from './life/still-life/longhorn';
+import Long10Boat from './life/still-life/long10-boat';
+import Long10Ship from './life/still-life/long10-ship';
 import Long3Barge from './life/still-life/long3-barge';
 import Long3Boat from './life/still-life/long3-boat';
 import Long3Canoe from './life/still-life/long3-canoe';
@@ -216,8 +217,7 @@ import Long8Boat from './life/still-life/long8-boat';
 import Long8Ship from './life/still-life/long8-ship';
 import Long9Boat from './life/still-life/long9-boat';
 import Long9Ship from './life/still-life/long9-ship';
-import Long10Boat from './life/still-life/long10-boat';
-import Long10Ship from './life/still-life/long10-ship';
+import Longhorn from './life/still-life/longhorn';
 import Loop from './life/still-life/loop';
 import Mango from './life/still-life/mango';
 import MangoWithBlockOnDock from './life/still-life/mango-with-block-on-dock';
@@ -233,6 +233,7 @@ import Pond from './life/still-life/pond';
 import PondOnDock from './life/still-life/pond-on-dock';
 import Professor from './life/still-life/professor';
 import PythonSiameseSnake from './life/still-life/python-siamese-snake';
+import QuadPseudoStillLife from './life/still-life/quad-pseudo-still-life';
 renderTitle('Strict Still Life', 2);
 [
   _15BentPaperclip,
@@ -465,6 +466,7 @@ renderTitle('Strict Still Life', 2);
   PondOnDock,
   Professor,
   PythonSiameseSnake,
+  QuadPseudoStillLife,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
 import BiBlock from './life/pseudo-still-life/bi-block';
