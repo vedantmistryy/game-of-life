@@ -234,6 +234,12 @@ import PondOnDock from './life/still-life/pond-on-dock';
 import Professor from './life/still-life/professor';
 import PythonSiameseSnake from './life/still-life/python-siamese-snake';
 import QuadPseudoStillLife from './life/still-life/quad-pseudo-still-life';
+import RBeeAndSnake from './life/still-life/r-bee-and-snake';
+import RBeeOnHive from './life/still-life/r-bee-on-beehive';
+import RBeeWithFeather from './life/still-life/r-bee-with-feather';
+import RMangoAndHouse from './life/still-life/r-mango-and-house';
+import RotatedC from './life/still-life/rotated-c';
+import RotatedTable from './life/still-life/rotated-table';
 renderTitle('Strict Still Life', 2);
 [
   _15BentPaperclip,
@@ -467,6 +473,12 @@ renderTitle('Strict Still Life', 2);
   Professor,
   PythonSiameseSnake,
   QuadPseudoStillLife,
+  RBeeAndSnake,
+  RBeeOnHive,
+  RBeeWithFeather,
+  RMangoAndHouse,
+  RotatedC,
+  RotatedTable,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
 import BiBlock from './life/pseudo-still-life/bi-block';
