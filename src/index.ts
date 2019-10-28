@@ -498,8 +498,9 @@ renderTitle('Strict Still Life', 2);
 import BiBlock from './life/pseudo-still-life/bi-block';
 import BiBoat from './life/pseudo-still-life/bi-boat';
 import BlockOnBoat from './life/pseudo-still-life/block-on-boat';
-import PondOnPond from './life/still-life/pond-on-pond';
-import QuadPseudoStillLife from './life/still-life/quad-pseudo-still-life';
+import PondOnPond from './life/pseudo-still-life/pond-on-pond';
+import QuadPseudoStillLife from './life/pseudo-still-life/quad-pseudo-still-life';
+import TriplePseudoStillLife from './life/pseudo-still-life/triple-pseudo-still-life';
 renderTitle('Pseudo Still Life', 2);
 [
   BiBlock,
@@ -507,6 +508,7 @@ renderTitle('Pseudo Still Life', 2);
   BlockOnBoat,
   PondOnPond,
   QuadPseudoStillLife,
+  TriplePseudoStillLife,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
 // renderTitle('Constellation', 2);
