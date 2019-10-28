@@ -233,13 +233,20 @@ import Pond from './life/still-life/pond';
 import PondOnDock from './life/still-life/pond-on-dock';
 import Professor from './life/still-life/professor';
 import PythonSiameseSnake from './life/still-life/python-siamese-snake';
-import QuadPseudoStillLife from './life/still-life/quad-pseudo-still-life';
 import RBeeAndSnake from './life/still-life/r-bee-and-snake';
 import RBeeOnHive from './life/still-life/r-bee-on-beehive';
 import RBeeWithFeather from './life/still-life/r-bee-with-feather';
 import RMangoAndHouse from './life/still-life/r-mango-and-house';
 import RotatedC from './life/still-life/rotated-c';
 import RotatedTable from './life/still-life/rotated-table';
+import Scorpion from './life/still-life/scorpion';
+import Sesquihat from './life/still-life/sesquihat';
+import Shillelagh from './life/still-life/shillelagh';
+import ShillelaghSiameseSnake from './life/still-life/shillelagh-siamese-snake';
+import Ship from './life/still-life/ship';
+import ShipTie from './life/still-life/ship-tie';
+import ShipTieSnake from './life/still-life/ship-tie-snake';
+import Shuriken from './life/still-life/shuriken';
 renderTitle('Strict Still Life', 2);
 [
   _15BentPaperclip,
@@ -472,29 +479,38 @@ renderTitle('Strict Still Life', 2);
   PondOnDock,
   Professor,
   PythonSiameseSnake,
-  QuadPseudoStillLife,
   RBeeAndSnake,
   RBeeOnHive,
   RBeeWithFeather,
   RMangoAndHouse,
   RotatedC,
   RotatedTable,
+  Scorpion,
+  Sesquihat,
+  Shillelagh,
+  ShillelaghSiameseSnake,
+  Ship,
+  ShipTie,
+  ShipTieSnake,
+  Shuriken,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
 import BiBlock from './life/pseudo-still-life/bi-block';
 import BiBoat from './life/pseudo-still-life/bi-boat';
 import BlockOnBoat from './life/pseudo-still-life/block-on-boat';
 import PondOnPond from './life/still-life/pond-on-pond';
+import QuadPseudoStillLife from './life/still-life/quad-pseudo-still-life';
 renderTitle('Pseudo Still Life', 2);
 [
   BiBlock,
   BiBoat,
   BlockOnBoat,
   PondOnPond,
+  QuadPseudoStillLife,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
+// renderTitle('Constellation', 2);
 // renderTitle('Quasi Still Life', 2);
-// renderTitle('Enumerating Still Life', 2);
 
 import Lighthouse from './life/oscillator/lighthouse';
 import Pulsar from './life/oscillator/pulsar';
