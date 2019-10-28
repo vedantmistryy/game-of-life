@@ -511,8 +511,25 @@ renderTitle('Pseudo Still Life', 2);
   TriplePseudoStillLife,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
-// renderTitle('Constellation', 2);
-// renderTitle('Quasi Still Life', 2);
+import _7x9Eater from './life/eater/7x9-eater';
+import CenturyEater from './life/eater/century-eater';
+import Eater1 from './life/eater/eater-1';
+import Eater2 from './life/eater/eater-2';
+import Eater3 from './life/eater/eater-3';
+import Eater4 from './life/eater/eater-4';
+import Sidesnagger from './life/eater/sidesnagger';
+import TubWithTailEater from './life/eater/tub-with-tail-eater';
+renderTitle('Eater', 2);
+[
+  _7x9Eater,
+  CenturyEater,
+  Eater1,
+  Eater2,
+  Eater3,
+  Eater4,
+  Sidesnagger,
+  TubWithTailEater,
+].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
 import Lighthouse from './life/oscillator/lighthouse';
 import Pulsar from './life/oscillator/pulsar';
@@ -528,20 +545,4 @@ import Blinker from './life/oscillator/blinker';
 renderTitle('Muttering moat', 2);
 [
   Blinker,
-].forEach((v) => renderLife(v.title, v.life as Life[][]));
-
-import _7x9Eater from './life/eater/7x9-eater';
-import CenturyEater from './life/eater/century-eater';
-import Eater1 from './life/eater/eater-1';
-import Eater2 from './life/eater/eater-2';
-import Eater3 from './life/eater/eater-3';
-import Eater4 from './life/eater/eater-4';
-renderTitle('Eater', 1);
-[
-  _7x9Eater,
-  CenturyEater,
-  Eater1,
-  Eater2,
-  Eater3,
-  Eater4,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
