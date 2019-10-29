@@ -46,11 +46,11 @@ import BoatWithHookedTail from './life/still-life/boat-with-hooked-tail';
 import BoatWithLongTail from './life/still-life/boat-with-long-tail';
 import BoatWithLong3Tail from './life/still-life/boat-with-long3-tail';
 import BoatWithVeryLongTail from './life/still-life/boat-with-very-long-tail';
+import BTS from './life/still-life/bookend-table-snake';
 import Bookends from './life/still-life/bookends';
 import BookendsSiameseTables from './life/still-life/bookends-siamese-tables';
 import BrokenElevener from './life/still-life/broken-elevener';
 import BrokenSnake from './life/still-life/broken-snake';
-import BTS from './life/still-life/BTS';
 import Canoe from './life/still-life/canoe';
 import CanoeSiameseSnake from './life/still-life/canoe-siamese-snake';
 import CapAndDock from './life/still-life/cap-and-dock';
@@ -247,6 +247,21 @@ import Ship from './life/still-life/ship';
 import ShipTie from './life/still-life/ship-tie';
 import ShipTieSnake from './life/still-life/ship-tie-snake';
 import Shuriken from './life/still-life/shuriken';
+import Sidewalk from './life/still-life/sidewalk';
+import SkewRBees from './life/still-life/skew-r-bees';
+import SmallLake from './life/still-life/small-lake';
+import Snake from './life/still-life/snake';
+import SnakeBridgeSnake from './life/still-life/snake-bridge-snake';
+import SnakeSiameseSnake from './life/still-life/snake-siamese-snake';
+import SnakeSiameseVeryLongSnake from './life/still-life/snake-siamese-very-long-snake';
+import SnakeWithFeather from './life/still-life/snake-with-feather';
+import SnorkelLoop from './life/still-life/snorkel-loop';
+import Spiral from './life/still-life/spiral';
+import SuperLoaf from './life/still-life/super-loaf';
+import SuperMango from './life/still-life/super-mango';
+import SuperPond from './life/still-life/super-pond';
+import SymmetricScorpion from './life/still-life/symmetric-scorpion';
+import SymmetricalSynapse from './life/still-life/symmetrical-synapse';
 renderTitle('Strict Still Life', 2);
 [
   _15BentPaperclip,
@@ -493,6 +508,21 @@ renderTitle('Strict Still Life', 2);
   ShipTie,
   ShipTieSnake,
   Shuriken,
+  Sidewalk,
+  SkewRBees,
+  SmallLake,
+  Snake,
+  SnakeBridgeSnake,
+  SnakeSiameseSnake,
+  SnakeSiameseVeryLongSnake,
+  SnakeWithFeather,
+  SnorkelLoop,
+  Spiral,
+  SuperLoaf,
+  SuperMango,
+  SuperPond,
+  SymmetricScorpion,
+  SymmetricalSynapse,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
 import BiBlock from './life/pseudo-still-life/bi-block';
