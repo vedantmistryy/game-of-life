@@ -262,6 +262,10 @@ import SuperMango from './life/still-life/super-mango';
 import SuperPond from './life/still-life/super-pond';
 import SymmetricScorpion from './life/still-life/symmetric-scorpion';
 import SymmetricalSynapse from './life/still-life/symmetrical-synapse';
+import UpDoveOnDove from './life/still-life/up-dove-on-dove';
+import UpSnakeOnTable from './life/still-life/up-snake-on-table';
+import UpWingOnWing from './life/still-life/up-wing-on-wing';
+import ZQuadLoaf from './life/still-life/z-quad-loaf';
 renderTitle('Strict Still Life', 2);
 [
   _15BentPaperclip,
@@ -523,6 +527,10 @@ renderTitle('Strict Still Life', 2);
   SuperPond,
   SymmetricScorpion,
   SymmetricalSynapse,
+  UpDoveOnDove,
+  UpSnakeOnTable,
+  UpWingOnWing,
+  ZQuadLoaf,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
 import BiBlock from './life/pseudo-still-life/bi-block';
