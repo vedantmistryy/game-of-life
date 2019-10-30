@@ -265,6 +265,19 @@ import SymmetricalSynapse from './life/strict-still-life/symmetrical-synapse';
 import UpDoveOnDove from './life/strict-still-life/up-dove-on-dove';
 import UpSnakeOnTable from './life/strict-still-life/up-snake-on-table';
 import UpWingOnWing from './life/strict-still-life/up-wing-on-wing';
+import VeryLongBarge from './life/strict-still-life/very-long-barge';
+import VeryLongBoat from './life/strict-still-life/very-long-boat';
+import VeryLongCanoe from './life/strict-still-life/very-long-canoe';
+import VeryLongCisHookWithTail from './life/strict-still-life/very-long-cis-hook-with-tail';
+import VeryLongCisShillelagh from './life/strict-still-life/very-long-cis-shillelagh';
+import VeryLongClawWithTail from './life/strict-still-life/very-long-claw-with-tail';
+import VeryLongHookWithTail from './life/strict-still-life/very-long-hook-with-tail';
+import VeryLongIntegral from './life/strict-still-life/very-long-integral';
+import VeryLongMelusine from './life/strict-still-life/very-long-melusine';
+import VeryLongProdigal from './life/strict-still-life/very-long-prodigal';
+import VeryLongShillelagh from './life/strict-still-life/very-long-shillelagh';
+import VeryLongShip from './life/strict-still-life/very-long-ship';
+import VeryLongSnake from './life/strict-still-life/very-long-snake';
 import ZQuadLoaf from './life/strict-still-life/z-quad-loaf';
 renderTitle('Strict Still Life', 2);
 [
@@ -530,6 +543,19 @@ renderTitle('Strict Still Life', 2);
   UpDoveOnDove,
   UpSnakeOnTable,
   UpWingOnWing,
+  VeryLongBarge,
+  VeryLongBoat,
+  VeryLongCanoe,
+  VeryLongCisHookWithTail,
+  VeryLongCisShillelagh,
+  VeryLongClawWithTail,
+  VeryLongHookWithTail,
+  VeryLongIntegral,
+  VeryLongMelusine,
+  VeryLongProdigal,
+  VeryLongShillelagh,
+  VeryLongShip,
+  VeryLongSnake,
   ZQuadLoaf,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
