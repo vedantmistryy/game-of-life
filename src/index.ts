@@ -268,6 +268,21 @@ import TableAndTable from './life/strict-still-life/table-and-table';
 import TeardropWithCape from './life/strict-still-life/teardrop-with-cape';
 import TeardropWithClaw from './life/strict-still-life/teardrop-with-claw';
 import ThirteenLoop from './life/strict-still-life/thirteen-loop';
+import Tub from './life/strict-still-life/tub';
+import TubBendLineTub from './life/strict-still-life/tub-bend-line-tub';
+import TubWithCisTail from './life/strict-still-life/tub-with-cis-tail';
+import TubWithLong3Tail from './life/strict-still-life/tub-with-long3-tail';
+import TubWithLong4Tail from './life/strict-still-life/tub-with-long4-tail';
+import TubWithLongCisTail from './life/strict-still-life/tub-with-long-cis-tail';
+import TubWithLongTail from './life/strict-still-life/tub-with-long-tail';
+import TubWithTail from './life/strict-still-life/tub-with-tail';
+import TubWithTailSiameseSnake from './life/strict-still-life/tub-with-tail-siamese-snake';
+import TubWithTailWithCape from './life/strict-still-life/tub-with-tail-with-cape';
+import TubWithTwoDownCisTails from './life/strict-still-life/tub-with-two-down-cis-tails';
+import TubWithTwoDownTransTails from './life/strict-still-life/tub-with-two-down-trans-tails';
+import TubWithTwoUpCisTails from './life/strict-still-life/tub-with-two-up-cis-tails';
+import TubWithTwoUpTransTails from './life/strict-still-life/tub-with-two-up-trans-tails';
+import TubWithVeryLongTail from './life/strict-still-life/tub-with-very-long-tail';
 import TwelveLoop from './life/strict-still-life/twelve-loop';
 import TwinHat from './life/strict-still-life/twin-hat';
 import UpDoveOnDove from './life/strict-still-life/up-dove-on-dove';
@@ -553,6 +568,21 @@ renderTitle('Strict Still Life', 2);
   TeardropWithCape,
   TeardropWithClaw,
   ThirteenLoop,
+  Tub,
+  TubBendLineTub,
+  TubWithCisTail,
+  TubWithLong3Tail,
+  TubWithLong4Tail,
+  TubWithLongCisTail,
+  TubWithLongTail,
+  TubWithTail,
+  TubWithTailSiameseSnake,
+  TubWithTailWithCape,
+  TubWithTwoDownCisTails,
+  TubWithTwoDownTransTails,
+  TubWithTwoUpCisTails,
+  TubWithTwoUpTransTails,
+  TubWithVeryLongTail,
   TwelveLoop,
   TwinHat,
   UpDoveOnDove,
