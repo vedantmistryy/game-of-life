@@ -688,17 +688,33 @@ renderTitle('Eater', 2);
   TubWithTailEater,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
+import AForAll from './life/oscillator/a-for-all';
+import AchimsOtherP16 from './life/oscillator/achims-other-p16';
+import AchimsP4 from './life/oscillator/achims-p4';
+import AchimsP8 from './life/oscillator/achims-p8';
+import AchimsP11 from './life/oscillator/achims-p11';
+import AchimsP16 from './life/oscillator/achims-p16';
+import AchimsP114 from './life/oscillator/achims-p114';
+import Almosymmetric from './life/oscillator/almosymmetric';
 import Lighthouse from './life/oscillator/lighthouse';
 import Pulsar from './life/oscillator/pulsar';
 import Toad from './life/oscillator/toad';
 renderTitle('Oscillator', 1);
 [
+  AForAll,
+  AchimsOtherP16,
+  AchimsP4,
+  AchimsP8,
+  AchimsP11,
+  AchimsP16,
+  AchimsP114,
+  Almosymmetric,
   Lighthouse,
   Toad,
   Pulsar,
 ].forEach((v) => renderLife(v.title, v.life as Life[][]));
 
-import Blinker from './life/oscillator/blinker';
+import Blinker from './life/oscillator/muttering-moat/blinker';
 renderTitle('Muttering moat', 2);
 [
   Blinker,
