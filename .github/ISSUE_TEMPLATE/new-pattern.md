@@ -1,6 +1,6 @@
 ---
-name: 'Feat: Still Life'
-about: Feature request of "still life"
+name: 'Feat: New Pattern'
+about: Feature request of new pattern
 title: 'feat: '
 labels: help wanted, good first issue, up-for-grabs
 assignees: ''
