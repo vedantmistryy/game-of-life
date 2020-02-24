@@ -12,3 +12,10 @@ Let's make this pattern:
 
 Please work at this file:
 **file link from master branch**
+
+If you wanna tackle this issue, please leave comment.  
+I'll assign to you!  
+
+Are you first time for contributing this repo?  
+Please read this [guide](https://github.com/TroyTae/game-of-life/blob/master/.github/CONTRIBUTING.md) :)  
+ 
