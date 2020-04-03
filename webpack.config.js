@@ -2,6 +2,7 @@ const fs  = require("fs");
 const path = require("path");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const entry = (() => {
   const tsExtRegExp = new RegExp('.ts$', 'g');
@@ -37,13 +38,26 @@ const baseHTMLConfig = {
 module.exports = (env, arg) => {
   const config = {
     entry,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          common: {
+            name: 'common',
+            minChunks: 3,
+            chunks: 'all',
+            enforce: true,
+          }
+        },
+      },
+    },
     output: {
       path: path.join(process.cwd(), "docs"),
       filename: "[name].[chunkhash].js",
       crossOriginLoading: false
     },
     resolve: {
-      extensions: [".js", ".ts"]
+      extensions: [".js", ".ts"],
+      plugins: [new TsconfigPathsPlugin()]
     },
     module: {
       rules: [{
@@ -55,14 +69,15 @@ module.exports = (env, arg) => {
       new HtmlWebpackPlugin({
         ...baseHTMLConfig,
         filename: `${path}.html`,
-        template: "./src/template.js",
+        template: "./src/template/life.js",
+        templateParameters: { path },
         chunks: [path]
       })
     )).concat(
       new HtmlWebpackPlugin({
         ...baseHTMLConfig,
         filename: `index.html`,
-        template: "./src/template.js",
+        template: "./src/template/index.js",
         templateParameters: { entry },
         chunks: []
       })
