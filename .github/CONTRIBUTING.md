@@ -29,4 +29,4 @@ You can leave issue at [here](https://github.com/TroyTae/game-of-life/issues/new
 
 ## Helpful Tool
 
-[Bool Array Filler](https://lukestorry.github.io/bool-array-filler/) by @LukeStorry
+[Bool Array Filler](https://lukestorry.github.io/bool-array-filler/) by [@LukeStorry](https://github.com/LukeStorry)
