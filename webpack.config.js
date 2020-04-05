@@ -4,7 +4,7 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
-const entry = (() => {
+const entries = (() => {
   const tsExtRegExp = new RegExp('.ts$', 'g');
   const rootDirectory = './src/life';
   const rootDirectoryRegExp = new RegExp(`^${rootDirectory}/`, 'g');
@@ -26,7 +26,6 @@ const entry = (() => {
 })();
 
 const baseHTMLConfig = {
-  favicon: "./favicon.gif",
   minify: {
     collapseBooleanAttributes: true,
     collapseInlineTagWhitespace: true,
@@ -37,7 +36,7 @@ const baseHTMLConfig = {
 
 module.exports = (env, arg) => {
   const config = {
-    entry,
+    entry: entries,
     optimization: {
       splitChunks: {
         cacheGroups: {
@@ -64,24 +63,24 @@ module.exports = (env, arg) => {
         test: /\.ts$/,
         loader: "ts-loader"
       }, {
-        test: /\.css$/,
+        test: /\.(css|gif)$/,
         loader: "file-loader"
       }]
     },
-    plugins: Object.keys(entry).map((path) => (
+    plugins: Object.keys(entries).map((entry) => (
       new HtmlWebpackPlugin({
         ...baseHTMLConfig,
-        filename: `${path}.html`,
+        filename: `${entry}.html`,
         template: "./src/template/life.js",
-        templateParameters: { path },
-        chunks: [path]
+        templateParameters: { entry },
+        chunks: [entry]
       })
     )).concat(
       new HtmlWebpackPlugin({
         ...baseHTMLConfig,
         filename: `index.html`,
         template: "./src/template/index.js",
-        templateParameters: { entry },
+        templateParameters: { entries },
         chunks: []
       })
     ),
