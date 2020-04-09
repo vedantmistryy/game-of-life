@@ -23,7 +23,7 @@ const data = (() => {
       if (tsExtRegExp.test(name)) {
         const entry = path.replace(rootDirectoryRegExp, '').replace(tsExtRegExp, '');
         obj.entries[entry] = path;
-        obj.hierarchy[name] = entry;
+        obj.hierarchy[entry] = true;
       } else {
         const data = parseDirectory(path);
         obj.entries = {
