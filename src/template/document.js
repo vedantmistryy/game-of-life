@@ -15,7 +15,7 @@ module.exports = ({
         <meta charset="UTF-8">
         <meta name="author" content="TroyTae">
         <meta name="robots" content="index,follow">
-        <meta name="keywords" content="Game of Life,Conway's Game of Life">
+        <meta name="keywords" content="Conway,Game of Life,Conway's Game of Life">
         <meta name="description" content="${description}">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0">
 
