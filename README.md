@@ -1,4 +1,6 @@
-# Conway's Game of Life
+[![Netlify Status](https://api.netlify.com/api/v1/badges/02463762-5814-4b93-89a9-6921a7c00a50/deploy-status)](https://app.netlify.com/sites/troytae-game-of-life/deploys)
+
+# Game of Life
 
 ## Description
 
@@ -9,7 +11,7 @@ And I also hope this repository is a [good start point](https://github.com/TroyT
 ## Demo
 
 ![Demo gif](./static/favicon.gif)  
-Website: https://troytae.github.io/game-of-life/  
+Website: https://troytae-game-of-life.netlify.app/  
 
 ## Installation
 
