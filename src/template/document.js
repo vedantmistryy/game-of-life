@@ -4,7 +4,7 @@ module.exports = ({
   relativePath,
 }) => {
   const url = 'https://troytae.github.io/game-of-life/';
-  const title = `Conway's Game of Life${subTitle ? ` - ${subTitle}` : ''}`;
+  const title = `${subTitle ? `${subTitle} - ` : ''} Conway's Game of Life`;
   const favicon = `${relativePath}favicon.gif`;
   const description = `Conway's Game of Life web version!`;
   return `
