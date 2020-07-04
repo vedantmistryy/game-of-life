@@ -1,6 +1,7 @@
 .idea
+.vscode
+.directory
+dist
 src/build
 node_modules
 package-lock.json
-.directory
-.vscode
