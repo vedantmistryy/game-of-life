@@ -6,7 +6,7 @@
 
 Conway's Game of Life web version!  
 I hope this repository is a good lab for Game of Life.  
-And I also hope this repository is a [good start point](https://github.com/TroyTae/game-of-life/contribute) for first contributor.  
+And I also hope this repository is a [good start point](https://github.com/TroyTae/game-of-life/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) for first contributor.  
 
 ## Demo
 
