@@ -4,18 +4,11 @@ const parser = require('./parser');
 const prebuild = require('./prebuild');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const {defaultHtmlWebpackPluginConfig} = require('troyjs/webpack');
 
 prebuild();
 
 const distDir = 'dist';
-const baseHTMLConfig = {
-  minify: {
-    collapseBooleanAttributes: true,
-    collapseInlineTagWhitespace: true,
-    collapseWhitespace: true,
-    removeComments: true
-  },
-};
 const {
   entries,
   hierarchy
@@ -51,6 +44,9 @@ module.exports = (env, arg) => {
     },
     module: {
       rules: [{
+        test: /\.(css|gif)$/,
+        loader: 'file-loader'
+      }, {
         test: /\.ts$/,
         loader: 'ts-loader'
       }]
@@ -58,7 +54,7 @@ module.exports = (env, arg) => {
     plugins: [
       ...Object.keys(entries).map((entry) => (
         new HtmlWebpackPlugin({
-          ...baseHTMLConfig,
+          ...defaultHtmlWebpackPluginConfig,
           filename: `${entry}.html`,
           template: './src/template/life.js',
           templateParameters: { hierarchy, entry },
@@ -66,7 +62,7 @@ module.exports = (env, arg) => {
         })
       )),
       new HtmlWebpackPlugin({
-        ...baseHTMLConfig,
+        ...defaultHtmlWebpackPluginConfig,
         filename: 'index.html',
         template: './src/template/index.js',
         templateParameters: { hierarchy },
