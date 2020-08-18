@@ -1,12 +1,9 @@
 const fs = require('fs-extra');
 const path = require('path');
 const parser = require('./parser');
-const prebuild = require('./prebuild');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const { defaultHtmlWebpackPluginConfig } = require('troyjs/webpack');
-
-prebuild();
 
 const distDir = 'dist';
 const { entries, hierarchy } = parser();

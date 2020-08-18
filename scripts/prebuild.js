@@ -27,6 +27,4 @@ function prebuild(dataList) {
   });
 }
 
-module.exports = function () {
-  prebuild(readDirectory(lifePath));
-};
+prebuild(readDirectory(lifePath));
