@@ -31,12 +31,13 @@ const generateIndexes = (level, directories) => {
         name: `_${
           obj.name
             .replace(/\-/g, '_')
-            .replace(/\.json/g, '')
+            .replace(/\.json$/g, '')
         }`,
         href: `/${
           paths
             .slice(2)
             .join('/')
+            .replace(/\.json$/g, '')
         }`,
         path: `./${
           paths
