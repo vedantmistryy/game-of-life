@@ -3,7 +3,7 @@ const path = require('path');
 const { readDirectory } = require('troyjs/node');
 
 const distDir = 'dist';
-const staticDir = path.join('src', 'static');
+const staticDir = 'static';
 fs.emptyDirSync(distDir);
 fs.copyFileSync(
   path.join(staticDir, 'robots.txt'),
@@ -14,7 +14,7 @@ fs.copyFileSync(
   path.join(distDir, '_redirects')
 );
 
-const directories =  readDirectory(path.join('src', 'life'));
+const directories =  readDirectory('life');
 const generateIndexes = (level, directories) => {
   return directories.reduce((arr, obj) => {
     if (Array.isArray(obj.children)) {
@@ -44,7 +44,7 @@ const generateIndexes = (level, directories) => {
             .join('/')
             .replace(/\.json$/g, '')
         }`,
-        path: `./${
+        path: `../life/${
           paths
             .slice(1)
             .join('/')
@@ -61,7 +61,7 @@ fs.writeFileSync(path.join('src', 'index.tsx'), `
 import { h, render } from 'preact';
 import Router from 'preact-router';
 import { Link } from 'preact-router/match';
-import Page from './page';
+import Pattern from './pattern';
 ${lifes
   .map((life) => `
 import ${life.name} from '${life.path}';`)
@@ -78,7 +78,7 @@ render((
     </article>
     ${lifes
       .map((life) => `
-    <Page path='${life.href}' lifeData={${life.name}} />`)
+    <Pattern path='${life.href}' lifeData={${life.name}} />`)
       .join('')}
   </Router>
 ), document.getElementById('app'));

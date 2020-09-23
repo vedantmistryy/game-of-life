@@ -5,16 +5,16 @@ import { GameOfLifeEngine } from './engine';
 
 const ISSUE_LINK = 'https://github.com/TroyTae/game-of-life/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22';
 
-interface PageProps extends RoutableProps {
+interface PatternProps extends RoutableProps {
   lifeData: LifeData;
 }
 
-export default function Page({
+export default function Pattern({
   lifeData: {
     title,
     life,
   },
-}: PageProps) {
+}: PatternProps) {
   const canvas = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
