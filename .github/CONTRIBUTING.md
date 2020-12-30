@@ -27,4 +27,4 @@ You can leave issue at [here](https://github.com/TroyTae/game-of-life/issues/new
 ## Helpful Tool	
 
 [Bool Array Filler](https://lukestorry.github.io/bool-array-filler/) by [@LukeStorry](https://github.com/LukeStorry)  
-[Spreadsheets Helper](https://docs.google.com/spreadsheets/d/1bL5SX9RK-wT38WmTY3Vas1dGmXgFzgjleulGwkJFgIw/edit#gid=0) by [hk7math](https://github.com/hk7math)  
+[Spreadsheets Helper](https://docs.google.com/spreadsheets/d/1bL5SX9RK-wT38WmTY3Vas1dGmXgFzgjleulGwkJFgIw/edit#gid=0) by [@hk7math](https://github.com/hk7math)  
