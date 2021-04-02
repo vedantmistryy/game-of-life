@@ -1,6 +1,7 @@
 import { GameOfLifeEngine } from './engine';
 import {
   createElement,
+  ID,
   APPEND,
   CANVAS,
   INPUT,
@@ -21,7 +22,7 @@ document.body[APPEND](
   createElement(MAIN, (main) => {
     main[APPEND](
       createElement(DATALIST, (datalist) => {
-        datalist.id = DATALIST_ID;
+        datalist[ID] = DATALIST_ID;
         patterns.forEach(({ title }) =>
           datalist[APPEND](
             createElement(OPTION, (option) => {
@@ -36,7 +37,7 @@ document.body[APPEND](
         input.setAttribute('list', DATALIST_ID);
         input[ADD_EVENT_LISTENER](CHANGE, () => {
           const pattern = patterns.filter(
-            ({ title }) => title === input.value
+            ({ title }) => title === input[VALUE]
           )[0];
           if (pattern) {
             engine.setLife(pattern.life);

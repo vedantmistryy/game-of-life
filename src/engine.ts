@@ -1,3 +1,9 @@
+import {
+  CANVAS,
+  HEIGHT,
+  WIDTH,
+} from "noliter";
+
 enum DOTS_STYLE {
   WIDTH = 16,
   HEIGHT = 16,
@@ -25,7 +31,7 @@ export class GameOfLifeEngine {
   constructor(cvs: HTMLCanvasElement, life: Life[][]) {
     const ctx = cvs.getContext('2d');
     if (ctx) {
-      this.canvas = cvs;
+      this[CANVAS] = cvs;
       this.context = ctx;
       this.setLife(life);
       this.startLife();
@@ -36,13 +42,13 @@ export class GameOfLifeEngine {
 
   setLife(life: Life[][]): void {
     this.life = life;
-    this.canvas.width = getCoordinateX(life[0].length);
-    this.canvas.height = getCoordinateY(life.length);
+    this[CANVAS][WIDTH] = getCoordinateX(life[0].length);
+    this[CANVAS][HEIGHT] = getCoordinateY(life.length);
   }
 
   public clear(): void {
     this.context.fillStyle = BACKGROUND_COLOR;
-    this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    this.context.fillRect(0, 0, this[CANVAS][WIDTH], this[CANVAS][HEIGHT]);
   }
 
   public startLife(): void {
@@ -69,7 +75,7 @@ export class GameOfLifeEngine {
       getCoordinateX(x),
       getCoordinateY(y),
       DOTS_STYLE.WIDTH,
-      DOTS_STYLE.HEIGHT
+      DOTS_STYLE.HEIGHT,
     );
   }
 
