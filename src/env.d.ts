@@ -4,5 +4,3 @@ declare type LifeData = {
   title: string;
   life: Life[][];
 };
-
-declare module '*.json';
