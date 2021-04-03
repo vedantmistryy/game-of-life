@@ -2,6 +2,8 @@ import {
   CANVAS,
   HEIGHT,
   WIDTH,
+  CLEAR_INTERVAL,
+  SET_INTERVAL,
 } from "noliter";
 
 enum DOTS_STYLE {
@@ -54,7 +56,7 @@ export class GameOfLifeEngine {
   public startLife(): void {
     if (!this.intervalKey) {
       this.drawDots();
-      this.intervalKey = window.setInterval(() => {
+      this.intervalKey = window[SET_INTERVAL](() => {
         this.life = this.life.map((children, i) =>
           children.map((isSurvive, j) => this.nextLife(j, i, isSurvive))
         );
@@ -65,7 +67,7 @@ export class GameOfLifeEngine {
 
   public stopLife(): void {
     if (this.intervalKey !== null) {
-      clearInterval(this.intervalKey);
+      window[CLEAR_INTERVAL](this.intervalKey);
       this.intervalKey = null;
     }
   }

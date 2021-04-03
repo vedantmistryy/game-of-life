@@ -7,10 +7,13 @@ import {
   INPUT,
   DATALIST,
   OPTION,
+  SET_ATTRIBUTE,
+  ADD_EVENT_LISTENER,
   MAIN,
   VALUE,
-  ADD_EVENT_LISTENER,
   CHANGE,
+  FOR_EACH,
+  SPELLCHECK,
 } from 'noliter';
 import patterns from './patterns';
 
@@ -23,7 +26,7 @@ document.body[APPEND](
     main[APPEND](
       createElement(DATALIST, (datalist) => {
         datalist[ID] = DATALIST_ID;
-        patterns.forEach(({ title }) =>
+        patterns[FOR_EACH](({ title }) =>
           datalist[APPEND](
             createElement(OPTION, (option) => {
               option[VALUE] = title;
@@ -32,9 +35,9 @@ document.body[APPEND](
         );
       }),
       createElement(INPUT, (input) => {
-        input.spellcheck = false;
+        input[SPELLCHECK] = false;
         input[VALUE] = patterns[0].title;
-        input.setAttribute('list', DATALIST_ID);
+        input[SET_ATTRIBUTE]('list', DATALIST_ID);
         input[ADD_EVENT_LISTENER](CHANGE, () => {
           const pattern = patterns.filter(
             ({ title }) => title === input[VALUE]
@@ -46,5 +49,5 @@ document.body[APPEND](
       })
     );
   }),
-  canvas
+  canvas,
 );
