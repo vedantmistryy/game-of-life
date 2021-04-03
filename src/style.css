@@ -8,16 +8,6 @@ body {
   text-align: center;
 }
 
-a {
-  color: #2997ff;
-  text-decoration: none;
-}
-
-a:hover,
-a:active {
-  text-decoration: underline;
-}
-
 canvas {
   border-radius: 0.25rem;
 }

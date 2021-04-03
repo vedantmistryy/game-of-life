@@ -2,8 +2,12 @@ import {
   CANVAS,
   HEIGHT,
   WIDTH,
+  MAP,
   CLEAR_INTERVAL,
   SET_INTERVAL,
+  FILL_STYLE,
+  FILL_RECT,
+  FOR_EACH,
 } from "noliter";
 
 enum DOTS_STYLE {
@@ -49,16 +53,16 @@ export class GameOfLifeEngine {
   }
 
   public clear(): void {
-    this.context.fillStyle = BACKGROUND_COLOR;
-    this.context.fillRect(0, 0, this[CANVAS][WIDTH], this[CANVAS][HEIGHT]);
+    this.context[FILL_STYLE] = BACKGROUND_COLOR;
+    this.context[FILL_RECT](0, 0, this[CANVAS][WIDTH], this[CANVAS][HEIGHT]);
   }
 
   public startLife(): void {
     if (!this.intervalKey) {
       this.drawDots();
       this.intervalKey = window[SET_INTERVAL](() => {
-        this.life = this.life.map((children, i) =>
-          children.map((isSurvive, j) => this.nextLife(j, i, isSurvive))
+        this.life = this.life[MAP]((children, i) =>
+          children[MAP]((isSurvive, j) => this.nextLife(j, i, isSurvive))
         );
         this.drawDots();
       }, 500);
@@ -83,9 +87,9 @@ export class GameOfLifeEngine {
 
   protected drawDots(): void {
     this.clear();
-    this.life.forEach((children, i) => {
-      children.forEach((isSurvive, j) => {
-        this.context.fillStyle = isSurvive
+    this.life[FOR_EACH]((children, i) => {
+      children[FOR_EACH]((isSurvive, j) => {
+        this.context[FILL_STYLE] = isSurvive
           ? DOTS_STYLE.SURVIVE_COLOR
           : DOTS_STYLE.DEAD_COLOR;
         this.drawDot(j, i);

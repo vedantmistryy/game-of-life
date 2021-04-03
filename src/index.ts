@@ -1,6 +1,7 @@
 import { GameOfLifeEngine } from './engine';
 import {
   createElement,
+  H1,
   ID,
   APPEND,
   CANVAS,
@@ -14,6 +15,7 @@ import {
   CHANGE,
   FOR_EACH,
   SPELLCHECK,
+  TEXT_CONTENT,
 } from 'noliter';
 import patterns from './patterns';
 
@@ -24,6 +26,9 @@ const DATALIST_ID = 'patterns';
 document.body[APPEND](
   createElement(MAIN, (main) => {
     main[APPEND](
+      createElement(H1, (h1) => {
+        h1[TEXT_CONTENT] = 'Game of Life';
+      }),
       createElement(DATALIST, (datalist) => {
         datalist[ID] = DATALIST_ID;
         patterns[FOR_EACH](({ title }) =>
