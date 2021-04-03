@@ -3,7 +3,6 @@ const path = require('path');
 const { readDirectory } = require('./memfs');
 
 const distDir = 'docs';
-fs.emptyDirSync(distDir);
 const readPatterns = (directories) => {
   return directories.reduce((arr, obj) => {
     if (Array.isArray(obj.children)) {

@@ -11,6 +11,7 @@
     "fix": "npx prettier --write ./patterns",
     "test": "prettier --check ./patterns",
     "start": "parcel src/index.html",
-    "build": "node ./scripts/prebuild.js & parcel build src/index.html -d docs --public-url ./ --experimental-scope-hoisting"
+    "prebuild": "node ./scripts/prebuild.js",
+    "build": "parcel build src/index.html -d docs --public-url ./"
   }
 }

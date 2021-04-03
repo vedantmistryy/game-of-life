@@ -1,4 +1,4 @@
-html {
+html, input {
   font: 16px sans-serif;
 }
 
@@ -8,6 +8,14 @@ body {
   text-align: center;
 }
 
-canvas {
+input, canvas {
   border-radius: 0.25rem;
+}
+
+input {
+  text-indent: 0.25rem;
+}
+
+canvas {
+  margin-top: 0.75rem;
 }
