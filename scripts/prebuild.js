@@ -2,7 +2,6 @@ const fs = require('fs-extra');
 const path = require('path');
 const { readDirectory } = require('./memfs');
 
-const distDir = 'docs';
 const readPatterns = (directories) => {
   return directories.reduce((arr, obj) => {
     if (Array.isArray(obj.children)) {
@@ -21,5 +20,4 @@ ${readPatterns(readDirectory('patterns'))
   .map((pattern) => JSON.stringify(pattern))
   .join(',\n')}
 ] as Array<{ title: string; life: Life[][]; }>;
-`
-);
+`);
