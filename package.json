@@ -7,8 +7,8 @@
     "typescript": "4.2.3"
   },
   "scripts": {
-    "fix": "npx prettier --write ./patterns",
-    "test": "prettier --check ./patterns",
+    "fix": "npx prettier --write ./docs/patterns",
+    "test": "prettier --check ./docs/patterns",
     "start": "parcel src/index.html -d docs",
     "prebuild": "node ./scripts/prebuild.js",
     "build": "parcel build src/index.html -d docs --public-url ./"
