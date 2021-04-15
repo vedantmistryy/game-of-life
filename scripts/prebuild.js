@@ -7,17 +7,23 @@ const readPatterns = (directories) => {
     if (Array.isArray(obj.children)) {
       readPatterns(obj.children).forEach((v) => arr.push(v));
     } else {
-      arr.push(require(path.join('..', obj.path)));
+      arr.push({
+        name: `_${obj.name.replace(/\-/g, '_').replace('.json', '')}`,
+        path: obj.path.replace(/\\/g, '/').replace('src', '.'),
+      });
     }
     return arr;
   }, []);
 };
 
+const patterns = readPatterns(readDirectory(path.join('src', 'patterns')));
+
 fs.writeFileSync(
   path.join('src', 'patterns.ts'),
-  `export default [
-${readPatterns(readDirectory('patterns'))
-  .map((pattern) => JSON.stringify(pattern))
-  .join(',\n')}
-] as Array<{ title: string; life: Life[][]; }>;
-`);
+  `${patterns.map(({ name, path }) => `import ${name} from '${path}';`).join('\n')}
+
+export default [
+${patterns.map(({ name }) => `  ${name}`).join(',\n')}
+];
+`
+);
