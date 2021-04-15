@@ -2,7 +2,6 @@
   "private": true,
   "devDependencies": {
     "fs-extra": "9.1.0",
-    "noliter": "0.9.8",
     "parcel-bundler": "1.12.5",
     "prettier": "2.2.1",
     "typescript": "4.2.3"
@@ -10,6 +9,7 @@
   "scripts": {
     "fix": "npx prettier --write ./patterns",
     "test": "prettier --check ./patterns",
+    "start": "parcel src/index.html -d docs",
     "prebuild": "node ./scripts/prebuild.js",
     "build": "parcel build src/index.html -d docs --public-url ./"
   }

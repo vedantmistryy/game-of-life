@@ -35,9 +35,12 @@ fs.writeFileSync(
     <link rel="shortcut icon" href="./favicon.gif">
   </head>
   <body>
-    <select>
+    <h1>Game of Life</h1>
+    <select id="patterns">
 ${patterns.map(({ name, path }) => `\t\t\t<option value="${path}">${name}</option>`).join('\n')}
     </select>
+    <h2 id="title"></h2>
+    <canvas id="canvas"></canvas>
     <script src="./index.ts"></script>
   </body>
 </html>

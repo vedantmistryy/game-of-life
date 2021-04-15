@@ -13,7 +13,8 @@
     <link rel="shortcut icon" href="./favicon.gif">
   </head>
   <body>
-    <select>
+    <h1>Game of Life</h1>
+    <select id="patterns">
 			<option value="oscillator/1-beacon.json">1 beacon</option>
 			<option value="oscillator/101.json">101</option>
 			<option value="oscillator/110P62.json">110P62</option>
@@ -728,6 +729,8 @@
 			<option value="still-life/strict-still-life/very-long-snake.json">Very long snake</option>
 			<option value="still-life/strict-still-life/z-quad-loaf.json">Z quad-loaf</option>
     </select>
+    <h2 id="title"></h2>
+    <canvas id="canvas"></canvas>
     <script src="./index.ts"></script>
   </body>
 </html>
