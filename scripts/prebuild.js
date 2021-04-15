@@ -16,14 +16,14 @@ const readPatterns = (directories) => {
   }, []);
 };
 
-const patterns = readPatterns(readDirectory(path.join('src', 'patterns')));
+// const patterns = readPatterns(readDirectory(path.join('src', 'patterns')));
 
-fs.writeFileSync(
-  path.join('src', 'patterns.ts'),
-  `${patterns.map(({ name, path }) => `import ${name} from '${path}';`).join('\n')}
+// fs.writeFileSync(
+//   path.join('src', 'patterns.ts'),
+//   `${patterns.map(({ name, path }) => `import ${name} from '${path}';`).join('\n')}
 
-export default [
-${patterns.map(({ name }) => `  ${name}`).join(',\n')}
-];
-`
-);
+// export default [
+// ${patterns.map(({ name }) => `  ${name}`).join(',\n')}
+// ];
+// `
+// );
