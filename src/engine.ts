@@ -1,15 +1,3 @@
-import {
-  CANVAS,
-  HEIGHT,
-  WIDTH,
-  MAP,
-  CLEAR_INTERVAL,
-  SET_INTERVAL,
-  FILL_STYLE,
-  FILL_RECT,
-  FOR_EACH,
-} from "noliter";
-
 enum DOTS_STYLE {
   WIDTH = 16,
   HEIGHT = 16,
@@ -37,7 +25,7 @@ export class GameOfLifeEngine {
   constructor(cvs: HTMLCanvasElement, life: Life[][]) {
     const ctx = cvs.getContext('2d');
     if (ctx) {
-      this[CANVAS] = cvs;
+      this.canvas = cvs;
       this.context = ctx;
       this.setLife(life);
       this.startLife();
@@ -48,22 +36,20 @@ export class GameOfLifeEngine {
 
   setLife(life: Life[][]): void {
     this.life = life;
-    this[CANVAS][WIDTH] = getCoordinateX(life[0].length);
-    this[CANVAS][HEIGHT] = getCoordinateY(life.length);
+    this.canvas.width = getCoordinateX(life[0].length);
+    this.canvas.height = getCoordinateY(life.length);
   }
 
   public clear(): void {
-    this.context[FILL_STYLE] = BACKGROUND_COLOR;
-    this.context[FILL_RECT](0, 0, this[CANVAS][WIDTH], this[CANVAS][HEIGHT]);
+    this.context.fillStyle = BACKGROUND_COLOR;
+    this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
   public startLife(): void {
     if (!this.intervalKey) {
       this.drawDots();
-      this.intervalKey = window[SET_INTERVAL](() => {
-        this.life = this.life[MAP]((children, i) =>
-          children[MAP]((isSurvive, j) => this.nextLife(j, i, isSurvive))
-        );
+      this.intervalKey = window.setInterval(() => {
+        this.life = this.life.map((children, i) => children.map((isSurvive, j) => this.nextLife(j, i, isSurvive)));
         this.drawDots();
       }, 500);
     }
@@ -71,27 +57,20 @@ export class GameOfLifeEngine {
 
   public stopLife(): void {
     if (this.intervalKey !== null) {
-      window[CLEAR_INTERVAL](this.intervalKey);
+      window.clearInterval(this.intervalKey);
       this.intervalKey = null;
     }
   }
 
   protected drawDot(x: number, y: number): void {
-    this.context.fillRect(
-      getCoordinateX(x),
-      getCoordinateY(y),
-      DOTS_STYLE.WIDTH,
-      DOTS_STYLE.HEIGHT,
-    );
+    this.context.fillRect(getCoordinateX(x), getCoordinateY(y), DOTS_STYLE.WIDTH, DOTS_STYLE.HEIGHT);
   }
 
   protected drawDots(): void {
     this.clear();
-    this.life[FOR_EACH]((children, i) => {
-      children[FOR_EACH]((isSurvive, j) => {
-        this.context[FILL_STYLE] = isSurvive
-          ? DOTS_STYLE.SURVIVE_COLOR
-          : DOTS_STYLE.DEAD_COLOR;
+    this.life.forEach((children, i) => {
+      children.forEach((isSurvive, j) => {
+        this.context.fillStyle = isSurvive ? DOTS_STYLE.SURVIVE_COLOR : DOTS_STYLE.DEAD_COLOR;
         this.drawDot(j, i);
       });
     });
@@ -102,15 +81,7 @@ export class GameOfLifeEngine {
   }
 
   protected nextLife(x: number, y: number, isSurvive: Life): Life {
-    const count =
-      this.isSurvive(x - 1, y - 1) +
-      this.isSurvive(x, y - 1) +
-      this.isSurvive(x + 1, y - 1) +
-      this.isSurvive(x - 1, y) +
-      this.isSurvive(x + 1, y) +
-      this.isSurvive(x - 1, y + 1) +
-      this.isSurvive(x, y + 1) +
-      this.isSurvive(x + 1, y + 1);
+    const count = this.isSurvive(x - 1, y - 1) + this.isSurvive(x, y - 1) + this.isSurvive(x + 1, y - 1) + this.isSurvive(x - 1, y) + this.isSurvive(x + 1, y) + this.isSurvive(x - 1, y + 1) + this.isSurvive(x, y + 1) + this.isSurvive(x + 1, y + 1);
     return count === 3 || (isSurvive && count === 2) ? 1 : 0;
   }
 }
