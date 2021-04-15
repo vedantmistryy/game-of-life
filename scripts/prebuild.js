@@ -8,22 +8,38 @@ const readPatterns = (directories) => {
       readPatterns(obj.children).forEach((v) => arr.push(v));
     } else {
       arr.push({
-        name: `_${obj.name.replace(/\-/g, '_').replace('.json', '')}`,
-        path: obj.path.replace(/\\/g, '/').replace('src', '.'),
+        name: require(path.join('..', obj.path)).title,
+        path: obj.path.replace(/\\/g, '/').replace('docs/patterns/', ''),
       });
     }
     return arr;
   }, []);
 };
 
-// const patterns = readPatterns(readDirectory(path.join('src', 'patterns')));
+const patterns = readPatterns(readDirectory(path.join('docs', 'patterns')));
 
-// fs.writeFileSync(
-//   path.join('src', 'patterns.ts'),
-//   `${patterns.map(({ name, path }) => `import ${name} from '${path}';`).join('\n')}
+fs.writeFileSync(
+  path.join('src', 'index.html'),
+  `<!DOCTYPE html>
 
-// export default [
-// ${patterns.map(({ name }) => `  ${name}`).join(',\n')}
-// ];
-// `
-// );
+<html lang="en">
+  <head>
+    <title>Conway's Game of Life</title>
+    <meta charset="utf-8">
+    <meta name="author" content="TroyTae">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Conway,Game of Life">
+    <meta name="description" content="Conway's Game of Life web version!">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon.gif">
+  </head>
+  <body>
+    <select>
+${patterns.map(({ name, path }) => `\t\t\t<option value="${path}">${name}</option>`).join('\n')}
+    </select>
+    <script src="./index.ts"></script>
+  </body>
+</html>
+`
+);

@@ -10,7 +10,6 @@
   "scripts": {
     "fix": "npx prettier --write ./patterns",
     "test": "prettier --check ./patterns",
-    "start": "parcel src/index.html",
     "prebuild": "node ./scripts/prebuild.js",
     "build": "parcel build src/index.html -d docs --public-url ./"
   }

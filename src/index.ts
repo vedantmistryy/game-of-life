@@ -1,5 +1,5 @@
-import { GameOfLifeEngine } from './engine';
-import { createElement, H1, ID, APPEND, CANVAS, INPUT, DATALIST, OPTION, SET_ATTRIBUTE, ADD_EVENT_LISTENER, MAIN, VALUE, CHANGE, FOR_EACH, SPELLCHECK, TEXT_CONTENT, DIV } from 'noliter';
+// import { GameOfLifeEngine } from './engine';
+// import { createElement, H1, ID, APPEND, CANVAS, INPUT, DATALIST, OPTION, SET_ATTRIBUTE, ADD_EVENT_LISTENER, MAIN, VALUE, CHANGE, FOR_EACH, SPELLCHECK, TEXT_CONTENT, DIV } from 'noliter';
 
 // const canvas = createElement(CANVAS);
 // const engine = new GameOfLifeEngine(canvas, patterns[0].life);
