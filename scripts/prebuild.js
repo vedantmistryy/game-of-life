@@ -36,11 +36,13 @@ fs.writeFileSync(
   </head>
   <body>
     <h1>Game of Life</h1>
-    <select id="patterns">
-${patterns.map(({ name, path }) => `\t\t\t<option value="${path}">${name}</option>`).join('\n')}
+    <select id="patterns">${patterns
+      .map(
+        ({ name, path }) => `
+      <option value="${path}">${name}</option>`
+      )
+      .join('')}
     </select>
-    <h2 id="title"></h2>
-    <canvas id="canvas"></canvas>
     <script src="./index.ts"></script>
   </body>
 </html>
