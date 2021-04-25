@@ -1,17 +1,21 @@
+import { createElement } from 'noliter';
 import { GameOfLifeEngine } from './engine';
 
-const select = document.getElementById('patterns') as HTMLSelectElement;
 const engine = new GameOfLifeEngine([[]]);
-
-function fetchLife(path: string) {
-  fetch(`./patterns/${path}`)
+const select = document.getElementById('patterns') as HTMLSelectElement;
+const fetchLife = () =>
+  fetch(`./patterns/${select.value}`)
     .then((res) => res.json())
     .then(({ life }) => {
       engine.stopLife();
       engine.setLife(life);
       engine.startLife();
     });
-}
 
-select.addEventListener('change', () => fetchLife(select.value));
-fetchLife((select.firstElementChild as HTMLOptionElement).value);
+select.addEventListener('change', () => fetchLife());
+document.body.appendChild(
+  createElement('main', (main) => {
+    main.appendChild(engine.canvas);
+    fetchLife();
+  })
+);
