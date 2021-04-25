@@ -1,3 +1,5 @@
+import { createElement } from 'noliter';
+
 enum DOTS_STYLE {
   WIDTH = 16,
   HEIGHT = 16,
@@ -22,7 +24,8 @@ export class GameOfLifeEngine {
   private life: Life[][];
   private intervalKey: null | number = null;
 
-  constructor(cvs: HTMLCanvasElement, life: Life[][]) {
+  constructor(life: Life[][]) {
+    const cvs = createElement('canvas');
     const ctx = cvs.getContext('2d');
     if (ctx) {
       this.canvas = cvs;
