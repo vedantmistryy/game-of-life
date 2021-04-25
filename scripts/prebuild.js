@@ -2,7 +2,13 @@ const fs = require('fs-extra');
 const path = require('path');
 const { readDirectory } = require('./memfs');
 
-const readPatterns = (directories) => {
+readDirectory(path.join('docs')).forEach(({ name, path }) => {
+  if (name !== 'patterns') {
+    fs.unlinkSync(path);
+  }
+});
+
+function readPatterns(directories) {
   return directories.reduce((arr, obj) => {
     if (Array.isArray(obj.children)) {
       readPatterns(obj.children).forEach((v) => arr.push(v));
@@ -14,7 +20,7 @@ const readPatterns = (directories) => {
     }
     return arr;
   }, []);
-};
+}
 
 const patterns = readPatterns(readDirectory(path.join('docs', 'patterns')));
 
