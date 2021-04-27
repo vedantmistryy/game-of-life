@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const { readDirectory } = require('./memfs');
 
-readDirectory(path.join('docs')).forEach(({ name, path }) => {
+readDirectory('docs').forEach(({ name, path }) => {
   if (name !== 'patterns') {
     fs.unlinkSync(path);
   }
@@ -25,7 +25,7 @@ function readPatterns(directories) {
 const patterns = readPatterns(readDirectory(path.join('docs', 'patterns')));
 
 fs.writeFileSync(
-  path.join('src', 'index.html'),
+  path.join('src', 'static', 'index.html'),
   `<!DOCTYPE html>
 
 <html lang="en">

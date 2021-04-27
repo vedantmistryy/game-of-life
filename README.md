@@ -9,7 +9,7 @@ And I also hope this repository is a [good starting point](https://github.com/Tr
 
 ## Demo
 
-![Demo](./src/favicon.gif)  
+![Demo](./src/static/favicon.gif)  
 You can see every pattern in [here](https://troytae.github.io/game-of-life/)
 
 ## Contributors

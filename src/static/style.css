@@ -1,5 +1,5 @@
 html,
-select {
+#patterns {
   font: 16px sans-serif;
 }
 
@@ -9,16 +9,20 @@ body {
   text-align: center;
 }
 
-select,
+#patterns,
 canvas {
   border-radius: 0.25rem;
 }
 
-select {
+#patterns {
   width: 12.5rem;
   padding: 0.375rem;
 }
 
-canvas {
-  margin-top: 0.75rem;
+.disabled {
+  opacity: 0.5;
+}
+
+main {
+  padding: 1rem 0;
 }
