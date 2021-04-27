@@ -49,7 +49,7 @@ fs.writeFileSync(
       )
       .join('')}
     </select>
-    <script src="./index.ts"></script>
+    <script src="../index.ts"></script>
   </body>
 </html>
 `

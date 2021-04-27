@@ -11,7 +11,7 @@
     "fix": "npx prettier --write ./docs/patterns",
     "test": "prettier --check ./docs/patterns",
     "start": "parcel src/static/index.html -d docs",
-    "prebuild": "node ./scripts/prebuild.js",
+    "prebuild": "node src/script/prebuild.js",
     "build": "parcel build src/static/index.html -d docs --public-url ./"
   }
 }
