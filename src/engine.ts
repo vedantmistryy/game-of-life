@@ -1,4 +1,4 @@
-import { createElement } from 'noliter';
+import { createCanvas } from 'noliter';
 
 enum DOTS_STYLE {
   WIDTH = 16,
@@ -25,16 +25,17 @@ export class GameOfLifeEngine {
   private intervalKey: null | number = null;
 
   constructor(life: Life[][]) {
-    const cvs = createElement('canvas');
-    const ctx = cvs.getContext('2d');
-    if (ctx) {
-      this.canvas = cvs;
-      this.context = ctx;
-      this.setLife(life);
-      this.startLife();
-    } else {
-      throw 'Failed to create context';
-    }
+    createCanvas((cvs) => {
+      const ctx = cvs.getContext('2d');
+      if (ctx) {
+        this.canvas = cvs;
+        this.context = ctx;
+      } else {
+        throw 'Failed to create context';
+      }
+    });
+    this.setLife(life);
+    this.startLife();
   }
 
   setLife(life: Life[][]): void {

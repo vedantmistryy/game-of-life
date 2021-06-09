@@ -1,4 +1,4 @@
-import { createElement } from 'noliter';
+import { createMain } from 'noliter';
 import { GameOfLifeEngine } from './engine';
 
 const engine = new GameOfLifeEngine([[]]);
@@ -14,7 +14,7 @@ const fetchLife = () =>
 
 select.addEventListener('change', () => fetchLife());
 document.body.appendChild(
-  createElement('main', (main) => {
+  createMain((main) => {
     main.appendChild(engine.canvas);
     fetchLife();
   })
