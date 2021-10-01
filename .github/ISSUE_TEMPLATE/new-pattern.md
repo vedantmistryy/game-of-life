@@ -2,7 +2,7 @@
 name: 'Feat: New Pattern'
 about: Feature request of new pattern
 title: 'feat: '
-labels: help wanted, good first issue
+labels: help wanted, good first issue, Hacktoberfest
 assignees: ''
 ---
 
