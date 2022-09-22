@@ -1,7 +1,5 @@
-.idea
 .vscode
-.directory
 .DS_Store
 .cache
-dist
+docs
 node_modules
